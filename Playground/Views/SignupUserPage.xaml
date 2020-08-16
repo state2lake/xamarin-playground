@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sr="clr-namespace:Playground.Resources"
+    xmlns:local="clr-namespace:Playground"
+    mc:Ignorable="d"
+    x:Class="Playground.Views.SignupUserPage">
+
+    <StackLayout Padding="0,20,0,0">
+         <Label Text="Sign up"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"/>
+
+         <StackLayout Padding="10,25,10,0">
+             <Label Text="Personal Informaiton"
+               HorizontalOptions="StartAndExpand"
+               FontAttributes="Bold"
+               FontSize="Large"/>
+            <local:RoundedEntry x:Name="firstnameEntry"
+                             Placeholder="First Name *"
+                             Margin="0,15,0,0"/>
+
+            <local:RoundedEntry x:Name="lastnameEntry"
+                             Placeholder="Last Name *"
+                             Margin="0,15,0,0"/>
+
+             <local:RoundedEntry x:Name="emailEntry"
+                             Placeholder="Email *"
+                             Margin="0,15,0,0"/>
+        </StackLayout>
+
+        <StackLayout Padding="10,40,10,0">
+             <Label Text="Baseball Information"
+               HorizontalOptions="StartAndExpand"
+               FontAttributes="Bold"
+               FontSize="Large"/>
+
+            <Picker x:Name="primaryPositionPicker"
+                    Title="Select a primary position"
+                    TitleColor="Black"
+                    Margin="0,15,0,0">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>C</x:String>
+                        <x:String>P</x:String>
+                        <x:String>1B</x:String>
+                        <x:String>2B</x:String>
+                        <x:String>3B</x:String>
+                        <x:String>SS</x:String>
+                        <x:String>LF</x:String>
+                        <x:String>CF</x:String>
+                        <x:String>RF</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            
+            <Picker x:Name="secondaryPositionPicker"
+                    Title="Select a secondary position"
+                    TitleColor="Black"
+                    Margin="0,15,0,0">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>C</x:String>
+                        <x:String>P</x:String>
+                        <x:String>1B</x:String>
+                        <x:String>2B</x:String>
+                        <x:String>3B</x:String>
+                        <x:String>SS</x:String>
+                        <x:String>LF</x:String>
+                        <x:String>CF</x:String>
+                        <x:String>RF</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Picker x:Name="hittingSidePicker"
+                    Title="Select what side of the plate you usually hit from"
+                    TitleColor="Black"
+                    Margin="0,15,0,0">
+                    
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>L</x:String>
+                        <x:String>R</x:String>
+                        <x:String>S</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <StackLayout Padding="10,40,10,0">
+             <Label Text="Locale Information"
+               HorizontalOptions="StartAndExpand"
+               FontAttributes="Bold"
+               FontSize="Large"/>
+
+                <local:RoundedEntry x:Name="zipEntry"
+                             Placeholder="Zip Code *"
+                             Margin="0,15,0,0"/>
+                <local:RoundedEntry x:Name="schoolEntry"
+                             Placeholder="School *"
+                             Margin="0,15,0,0"
+                             />
+
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Padding="10,40,10,0">
+         <local:RoundedButton
+                            Text="Submit"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            Clicked="Save_Button_Clicked" />
+         </StackLayout>                  
+    </StackLayout>
+</ContentPage>

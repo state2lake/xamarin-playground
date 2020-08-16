@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sr="clr-namespace:Playground.Resources"
+    xmlns:local="clr-namespace:Playground"
+    mc:Ignorable="d"
+    x:Class="Playground.MainPage">
+    <StackLayout Padding="0,20,0,0">
+      
+        <Label Text="Welcome to Jonathan's Playground Xamarin App! :)"
+               HorizontalOptions="Center"
+               />
+
+        <StackLayout Padding="0,40,0,0">
+            <Label Text="Login"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               FontAttributes="Bold"/>
+
+            <StackLayout Padding="10,25,10,0">
+                <local:RoundedEntry x:Name="usernameEntry"
+                     Placeholder="User Id"
+                     Text="{Binding UsernameEntryText}"/>
+           
+                <local:RoundedEntry
+                    Placeholder="Password"
+                    Text="{Binding PasswordEntryText}"
+                    Margin="0,15,0,0"/>
+
+                <Label x:Name="label"
+                  Text="{Binding FavoriteDeviceText}"
+                  HorizontalOptions="Center"/>
+
+                    <StackLayout Padding="10,25,10,0">
+                        <local:RoundedButton
+                            Text="Not a member? Sign Up"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            Clicked="Signup_Button_Clicked"/>
+
+                        <local:RoundedButton
+                            Text="Login"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            Clicked="Button_Clicked"
+                            Margin="0,15,0,0"/>
+                    </StackLayout>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Padding="10,25,10,0">
+         
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
