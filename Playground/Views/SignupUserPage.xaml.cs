@@ -8,7 +8,9 @@ namespace Playground.Views
 {
     public partial class SignupUserPage : ContentPage
     {
-        //TODO store this somewhere else 
+        TodoItemDatabase _todoItemDatabase = new TodoItemDatabase();
+
+        //TODO store this somewhere else
         string dbName = "CustomersDb.db3";
 
         public SignupUserPage()
@@ -18,26 +20,34 @@ namespace Playground.Views
        
         private async void Save_Button_Clicked(object sender, EventArgs e)
         {
-            
-            
-            if(string.IsNullOrEmpty(firstnameEntry.Text))
-            {
-                await DisplayAlert("", "Name", "Cancel");
-            }
-            User user = new User
-            {
-                firstName = firstnameEntry.Text,
-                lastName = lastnameEntry.Text,
-                email = emailEntry.Text,
-                zipCode = zipEntry.Text,
-                school = schoolEntry.Text
-            };
 
-            using (SQLiteConnection conn = new SQLiteConnection(dbName))
-            {
-                conn.CreateTable<User>();
-                int rowsAdded = conn.Insert(user);
-            }
+
+            //if (string.IsNullOrEmpty(firstnameEntry.Text))
+            //{
+            //    await DisplayAlert("", "Name", "Cancel");
+            //}
+            //else
+            //{
+            //    User user = new User
+            //    {
+            //        firstName = firstnameEntry.Text,
+            //        lastName = lastnameEntry.Text,
+            //        email = emailEntry.Text,
+            //        username = usernameENtry.Text,
+            //        password = passwordEntry.Text
+            //    };
+            //    UserLogin userLogin = new UserLogin
+            //    {
+            //        username = usernameENtry.Text,
+            //        password = passwordEntry.Text
+            //    };
+
+            //await _todoItemDatabase.SaveItemAsync(userLogin);
+
+            var todoItem = (User)BindingContext;
+            await App.UserManager.SaveTaskAsync(todoItem);
+            await Navigation.PushAsync(new MainPage());
+            //}
             //await Navigation.PushAsync(new SignupUserPage());
         }
 

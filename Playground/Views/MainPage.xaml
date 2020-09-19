@@ -10,10 +10,6 @@
     x:Class="Playground.MainPage">
     <StackLayout Padding="0,20,0,0">
       
-        <Label Text="Welcome to Jonathan's Playground Xamarin App! :)"
-               HorizontalOptions="Center"
-               />
-
         <StackLayout Padding="0,40,0,0">
             <Label Text="Login"
                HorizontalOptions="Center"
@@ -25,15 +21,15 @@
                      Placeholder="User Id"
                      Text="{Binding UsernameEntryText}"/>
            
-                <local:RoundedEntry
+                <local:RoundedEntry x:Name="passwordEntry"
                     Placeholder="Password"
                     Text="{Binding PasswordEntryText}"
                     Margin="0,15,0,0"/>
 
-                <Label x:Name="label"
-                  Text="{Binding FavoriteDeviceText}"
-                  HorizontalOptions="Center"/>
-
+                    <StackLayout Padding="10,25,10,0">
+                       <Button Text="Hello" Command="{Binding CheckboxTapped}" IsVisible="{Binding IsHelloVisible}"></Button>
+                       <Label Text="Hellot" IsVisible="{Binding IsLabelVisible}" HorizontalOptions="CenterAndExpand"></Label>
+                    </StackLayout>
                     <StackLayout Padding="10,25,10,0">
                         <local:RoundedButton
                             Text="Not a member? Sign Up"
@@ -51,7 +47,9 @@
             </StackLayout>
         </StackLayout>
         <StackLayout Padding="10,25,10,0">
-         
+        </StackLayout>
+        <StackLayout>
+            <Image Source="3d"></Image>
         </StackLayout>
     </StackLayout>
 </ContentPage>

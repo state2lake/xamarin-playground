@@ -15,6 +15,32 @@ namespace Playground
         protected readonly INavigationService NavigationService;
         public IList<Position> Positions { get; set; }
 
+        private bool _isHelloVisible = true;
+        public bool IsHelloVisible
+        {
+            get
+            {
+                return _isHelloVisible;
+            }
+            set
+            {
+                _isHelloVisible = value;
+                OnPropertyChanged();
+            }
+        }
+        private bool _isLabelVisible;
+        public bool IsLabelVisible
+        {
+            get
+            {
+                return _isLabelVisible;
+            }
+            set
+            {
+                _isLabelVisible = value;
+                OnPropertyChanged();
+            }
+        }
         private string _favoriteDeviceText;
         public string FavoriteDeviceText
         {
@@ -51,7 +77,7 @@ namespace Playground
             }
 
         }
-
+        public ICommand CheckboxTapped => new Command(async () => await CheckboxTappedAsync());
         public ICommand SignupButtonClicked => new Command(async () => await SignupButtonClickedAsync());
 
         public void FavortieDeviceStuff()
@@ -74,10 +100,26 @@ namespace Playground
         {
             OnPropertyChanged();
         }
-
+        async Task CheckboxTappedAsync()
+        {
+            IsLabelVisible = true;
+            IsHelloVisible = false;
+        }
         async Task SignupButtonClickedAsync()
         {
             //await Navigation.PushAsync(new LoginInfoPage());
+        }
+        public bool IsEntryFieldsNullOrEmpty(string u, string p)
+        {
+            if(string.IsNullOrEmpty(u) && string.IsNullOrEmpty(p))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+           
         }
     }
 }

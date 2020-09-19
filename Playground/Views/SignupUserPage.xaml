@@ -92,16 +92,16 @@
             </Picker>
 
             <StackLayout Padding="10,40,10,0">
-             <Label Text="Locale Information"
+             <Label Text="Account Information"
                HorizontalOptions="StartAndExpand"
                FontAttributes="Bold"
                FontSize="Large"/>
 
-                <local:RoundedEntry x:Name="zipEntry"
-                             Placeholder="Zip Code *"
+                <local:RoundedEntry x:Name="usernameENtry"
+                             Placeholder="User Name *"
                              Margin="0,15,0,0"/>
-                <local:RoundedEntry x:Name="schoolEntry"
-                             Placeholder="School *"
+                <local:RoundedEntry x:Name="passwordEntry"
+                             Placeholder="Password *"
                              Margin="0,15,0,0"
                              />
 

@@ -6,7 +6,7 @@ namespace Playground.Models
     public class User
     {
        [PrimaryKey, AutoIncrement]
-       public int Id
+       public string Id
         {
             get;
             set;
@@ -41,12 +41,12 @@ namespace Playground.Models
             get;
             set;
         }
-        public string zipCode
+        public string username
         {
             get;
             set;
         }
-        public string school
+        public string password
         {
             get;
             set;

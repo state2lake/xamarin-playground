@@ -1,4 +1,6 @@
 ﻿using System;
+using Playground.Service;
+using Playground.Service.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -6,10 +8,13 @@ namespace Playground
 {
     public partial class App : Application
     {
+        public static UserItemManager UserManager { get; private set; }
+
         public App()
         {
             InitializeComponent();
 
+            UserManager = new UserItemManager(new RestService());
             MainPage = new NavigationPage(new MainPage());
         }
         static TodoItemDatabase database;

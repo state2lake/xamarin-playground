@@ -1,10 +1,13 @@
 ﻿using System;
 using System.IO;
+using Xamarin.Forms;
 
 namespace Playground
 {
     public class Constants
     {
+        public static string RestUrl = Device.RuntimePlatform == Device.Android ? "https://10.0.2.2:5001/api/todoitems/{0}" : "https://localhost:5001/api/todoitems/{0}";
+
         public const string DatabaseFilename = "TodoSQLite.db3";
 
         public const SQLite.SQLiteOpenFlags Flags =
@@ -23,5 +26,7 @@ namespace Playground
                 return Path.Combine(basePath, DatabaseFilename);
             }
         }
+
+
     }
 }

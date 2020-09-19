@@ -26,30 +26,30 @@ namespace Playground
         {
             if (!initialized)
             {
-                if (!Database.TableMappings.Any(m => m.MappedType.Name == typeof(TodoItem).Name))
+                if (!Database.TableMappings.Any(m => m.MappedType.Name == typeof(UserLogin).Name))
                 {
-                    await Database.CreateTablesAsync(CreateFlags.None, typeof(TodoItem)).ConfigureAwait(false);
+                    await Database.CreateTablesAsync(CreateFlags.None, typeof(UserLogin)).ConfigureAwait(false);
                     initialized = true;
                 }
             }
         }
-        public Task<List<TodoItem>> GetItemsAsync()
+        public Task<List<UserLogin>> GetItemsAsync()
         {
-            return Database.Table<TodoItem>().ToListAsync();
+            return Database.Table<UserLogin>().ToListAsync();
         }
 
-        public Task<List<TodoItem>> GetItemsNotDoneAsync()
+        public Task<List<UserLogin>> GetItemsNotDoneAsync()
         {
             // SQL queries are also possible
-            return Database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
+            return Database.QueryAsync<UserLogin>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
         }
 
-        public Task<TodoItem> GetItemAsync(int id)
+        public Task<UserLogin> GetItemAsync(int id)
         {
-            return Database.Table<TodoItem>().Where(i => i.ID == id).FirstOrDefaultAsync();
+            return Database.Table<UserLogin>().Where(i => i.ID == id).FirstOrDefaultAsync();
         }
 
-        public Task<int> SaveItemAsync(TodoItem item)
+        public Task<int> SaveItemAsync(UserLogin item)
         {
             if (item.ID != 0)
             {
@@ -61,9 +61,10 @@ namespace Playground
             }
         }
 
-        public Task<int> DeleteItemAsync(TodoItem item)
+        public Task<int> DeleteItemAsync(UserLogin item)
         {
             return Database.DeleteAsync(item);
         }
+        
     }
 }

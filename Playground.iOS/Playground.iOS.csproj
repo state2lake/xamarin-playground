@@ -144,5 +144,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderer\" />
+    <Folder Include="Resources\drawable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="ripped.jpg" />
   </ItemGroup>
 </Project>
