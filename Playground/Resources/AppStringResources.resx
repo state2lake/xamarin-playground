@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-   
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
     </resheader>
@@ -14,7 +13,24 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader> 
     
-    
+    <data name="warmup_tee_drill" xml:space="preserve">
+        <value>Warmup: Tee Drill</value>
+    </data>
+     <data name="indoor_outdoor" xml:space="preserve">
+        <value>Indoor/Outdoor</value>
+    </data>
+     <data name="warmup_tee_drill_description" xml:space="preserve">
+        <value>Start by placing the Tee chest high and moving 6 inches away from the base of the Tee. Continuosly attempt to hit the ball to the back of the net until loose.</value>
+    </data>
+     <data name="warmup_tee_drill" xml:space="preserve">
+        <value>Warmup: Tee Drill</value>
+    </data>
+    <data name="warmup_bread_basket" xml:space="preserve">
+        <value>Warmup: Bread Basket</value>
+    </data>
+     <data name="warmup_bread_basket_description" xml:space="preserve">
+        <value>Place the Tee where you feel most comfortable hitting a fastball. This should be your ideal pich aka right in the bread basket. </value>
+    </data>
     <data name="login_password_hint" xml:space="preserve">
     <value>Password*</value>
     </data>

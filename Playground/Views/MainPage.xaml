@@ -4,7 +4,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:sr="clr-namespace:Playground.Resources"
     xmlns:local="clr-namespace:Playground"
     mc:Ignorable="d"
     x:Class="Playground.MainPage">
@@ -27,8 +26,8 @@
                     Margin="0,15,0,0"/>
 
                     <StackLayout Padding="10,25,10,0">
-                       <Button Text="Hello" Command="{Binding CheckboxTapped}" IsVisible="{Binding IsHelloVisible}"></Button>
-                       <Label Text="Hellot" IsVisible="{Binding IsLabelVisible}" HorizontalOptions="CenterAndExpand"></Label>
+                      
+                       <Label Text="Hello" IsVisible="{Binding IsLabelVisible}" HorizontalOptions="CenterAndExpand"></Label>
                     </StackLayout>
                     <StackLayout Padding="10,25,10,0">
                         <local:RoundedButton
@@ -41,7 +40,7 @@
                             Text="Login"
                             TextColor="White"
                             FontAttributes="Bold"
-                            Clicked="Button_Clicked"
+                            Clicked="Login_Button_Clicked"
                             Margin="0,15,0,0"/>
                     </StackLayout>
             </StackLayout>

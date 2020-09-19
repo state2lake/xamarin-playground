@@ -16,7 +16,7 @@ namespace Playground.Resources {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AppStringResources {
+    public class AppStringResources {
         
         private static System.Resources.ResourceManager resourceMan;
         
@@ -27,7 +27,7 @@ namespace Playground.Resources {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Resources.ResourceManager ResourceManager {
+        public static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
                     System.Resources.ResourceManager temp = new System.Resources.ResourceManager("Playground.Resources.AppStringResources", typeof(AppStringResources).Assembly);
@@ -38,7 +38,7 @@ namespace Playground.Resources {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static System.Globalization.CultureInfo Culture {
+        public static System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -47,7 +47,37 @@ namespace Playground.Resources {
             }
         }
         
-        internal static string login_password_hint {
+        public static string warmup_tee_drill {
+            get {
+                return ResourceManager.GetString("warmup_tee_drill", resourceCulture);
+            }
+        }
+        
+        public static string indoor_outdoor {
+            get {
+                return ResourceManager.GetString("indoor_outdoor", resourceCulture);
+            }
+        }
+        
+        public static string warmup_tee_drill_description {
+            get {
+                return ResourceManager.GetString("warmup_tee_drill_description", resourceCulture);
+            }
+        }
+        
+        public static string warmup_bread_basket {
+            get {
+                return ResourceManager.GetString("warmup_bread_basket", resourceCulture);
+            }
+        }
+        
+        public static string warmup_bread_basket_description {
+            get {
+                return ResourceManager.GetString("warmup_bread_basket_description", resourceCulture);
+            }
+        }
+        
+        public static string login_password_hint {
             get {
                 return ResourceManager.GetString("login_password_hint", resourceCulture);
             }

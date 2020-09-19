@@ -148,5 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="ripped.jpg" />
+    <BundleResource Include="Resources\pedroia_tee.jpg" />
+    <BundleResource Include="Resources\teework.jpg" />
+    <BundleResource Include="Resources\proficon.png" />
+    <BundleResource Include="Resources\iconmenuprofile.png" />
   </ItemGroup>
 </Project>

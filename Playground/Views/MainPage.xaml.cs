@@ -24,17 +24,9 @@ namespace Playground
                 await Navigation.PushAsync(new SignupUserPage());
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void Login_Button_Clicked(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(usernameEntry.Text) && !string.IsNullOrEmpty(passwordEntry.Text))
-            {
-                var getItems = await _todoItemDatabase.GetItemsAsync();
-               //Console.WriteLine("itemz" +getItems.Last<UserLogin>);
-            }
-            else
-            {
-                await DisplayAlert("Error","Please enter a valid email/username","Ok");
-            }
+                await Navigation.PushAsync(new HomePage());
         }
 
 
